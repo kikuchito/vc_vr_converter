@@ -2,16 +2,16 @@
     parameter DATA_WIDTH = 8,
     CREDIT_NUM = 2
   ) (
-    input logic clk,
-    input logic rst_n,
+    input logic                   clk,
+    input logic                   rst_n,
     //valid/credit interface
-    input logic [DATA_WIDTH-1:0] s_data_i,
-    input logic s_valid_i,
-    output logic s_credit_o,
+    input logic [DATA_WIDTH-1:0]  s_data_i,
+    input logic                   s_valid_i,
+    output logic                  s_credit_o,
     //valid/ready interface
     output logic [DATA_WIDTH-1:0] m_data_o,
-    output logic m_valid_o,
-    input logic m_ready_i
+    output logic                  m_valid_o,
+    input logic                   m_ready_i
   );
 
   localparam PTR_WIDTH = $clog2(CREDIT_NUM);

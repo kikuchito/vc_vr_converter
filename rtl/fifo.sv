@@ -19,9 +19,9 @@ module fifo #(
 );
     dtype read_data;
     localparam int unsigned FifoDepth = (DEPTH > 0) ? DEPTH : 1;
-    logic en;
-    logic [ADDR_DEPTH:0] read_pointer_n, read_pointer_q, write_pointer_n, write_pointer_q;
-    logic read_enable;
+    logic                   en;
+    logic [ADDR_DEPTH:0]    read_pointer_n, read_pointer_q, write_pointer_n, write_pointer_q;
+    logic                   read_enable;
     dtype [FifoDepth - 1:0] fifo;
     dtype [FifoDepth - 1:0] fifo_q;
 
